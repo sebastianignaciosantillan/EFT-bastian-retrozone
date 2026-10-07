@@ -46,7 +46,7 @@ function App() {
 
         const datosConRutasCompletas = datos.map((juego) => ({
           ...juego,
-          imagen: `${import.meta.env.BASE_URL}${juego.imagen}`,
+          imagen: `${import.meta.env.BASE_URL}${juego.imagen.replace(/^\/+/, '')}`,
         }));
 
         setJuegos(datosConRutasCompletas);

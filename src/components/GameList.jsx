@@ -45,7 +45,7 @@ function GameList({ juegos, onEliminar, onAgregarAlCarrito, idsEnCarrito }) {
               {juego.categoria}
             </span>
             <img
-              src={`${import.meta.env.BASE_URL}${juego.imagen}`}
+              src={juego.imagen}
               className="card-img-top"
               loading="lazy"
               alt={`Portada del videojuego ${juego.nombre}`}
