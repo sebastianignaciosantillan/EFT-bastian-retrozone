@@ -1,25 +1,8 @@
-# GameHub — Tienda de Videojuegos (EFT)
+# BastianRetroZone — Tienda de Videojuegos (EFT)
 
 Evaluación Final Transversal del curso Desarrollo Frontend I: sitio web para una tienda de venta de videojuegos online, desarrollado con **React + Vite** y **Bootstrap 5**.
 
-Mantiene la misma identidad visual (tipografía, colores, estilo de cards) que los proyectos anteriores del curso (Bastian-RetroZone), para que se note la consistencia de principio a fin de la asignatura.
-
-- **Autor:** [TU NOMBRE]
-- **Demo publicada:** [https://TU-USUARIO.github.io/NOMBRE-DEL-REPOSITORIO/](https://TU-USUARIO.github.io/NOMBRE-DEL-REPOSITORIO/)
-- **Repositorio:** [https://github.com/TU-USUARIO/NOMBRE-DEL-REPOSITORIO](https://github.com/TU-USUARIO/NOMBRE-DEL-REPOSITORIO)
-- **Video de presentación:** [link al .mp4]
-
-> Proyecto con fines académicos. No hay backend: el formulario de contacto valida los datos y simula el envío, pero no manda ningún mensaje real.
-
-## Antes de ejecutar: recursos pendientes
-
-Este repositorio **no incluye las imágenes ni la fuente**. Antes de correrlo:
-
-1. Copiá las 30 portadas de videojuegos a `public/img/` — el listado exacto de nombres de archivo está en `public/img/LEEME.txt`.
-2. Copiá tu `favicon.png` a `public/img/`.
-3. Copiá `nasalization-rg.otf` (la misma fuente de los proyectos anteriores) a `public/fonts/`.
-
-Los archivos `LEEME.txt` son solo un recordatorio; borralos una vez que copies todo.
+Proyecto con fines académicos. No hay backend: el formulario de contacto valida los datos y simula el envío, pero no manda ningún mensaje real.
 
 ## Tecnologías
 
@@ -37,25 +20,28 @@ npm run dev
 ## Estructura del proyecto
 
 ```
-eft-tienda-videojuegos/
+Eft-tienda-videojuegos/
 ├── index.html
+├── vite.config.js
+├── package.json
 ├── public/
-│   ├── img/        (30 portadas + favicon — ver sección de arriba)
-│   ├── fonts/        (fuente Nasalization — ver sección de arriba)
+│   ├── img/                       # 30 portadas, logo y favicon
+│   ├── fonts/                     # Fuente Nasalization
 │   └── data/
-│       └── videojuegos.json   # Catálogo: 30 juegos, 6 categorías
+│       └── videojuegos.json       # Catálogo: 30 juegos, 6 categorías
 └── src/
-    ├── main.jsx
-    ├── App.jsx                 # Estado central
-    ├── index.css
+    ├── main.jsx                   # Punto de entrada
+    ├── App.jsx                    # Estado central
+    ├── index.css                  # Estilos propios
     └── components/
-        ├── Navbar.jsx           # Navegación + ícono del carrito
-        ├── CartDropdown.jsx      # Tabla del carrito (se abre/cierra)
-        ├── CategoryFilter.jsx    # Botones de filtro por categoría
-        ├── GameList.jsx          # Catálogo de sugerencias
-        ├── CommunitySection.jsx  # Sección "Comunidad" + modal
-        ├── PublishGameModal.jsx  # Formulario para publicar un juego
-        └── ContactForm.jsx       # Formulario de contacto con validación
+        ├── Navbar.jsx             # Navegación + ícono del carrito
+        ├── CartDropdown.jsx       # Tabla del carrito (se abre/cierra)
+        ├── CategoryFilter.jsx     # Botones de filtro por categoría
+        ├── GameList.jsx           # Catálogo de sugerencias
+        ├── CommunitySection.jsx   # Sección "Comunidad" + modal
+        ├── PublishGameModal.jsx   # Formulario para publicar un juego
+        ├── ContactForm.jsx        # Formulario de contacto con validación
+        └── Footer.jsx             # Pie de página
 ```
 
 ## Cómo se resolvió cada requisito de la pauta
@@ -111,6 +97,3 @@ Ambas acciones usan exactamente el mismo mecanismo de React que pide la pauta (`
 - `aria-pressed` en los botones de categoría activa, `aria-expanded` en el botón del carrito.
 - Labels asociadas a cada campo de formulario (`htmlFor` + `id`).
 
-## Capturas y video
-
-*(Pendiente)*
