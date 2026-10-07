@@ -103,6 +103,14 @@ function App() {
   }
 
   /**
+   * Compra simulada: no hay backend, así que "comprar" solo vacía el
+   * carrito. El mensaje de confirmación lo muestra CartDropdown.
+   */
+  function comprarCarrito() {
+    setCarrito([]);
+  }
+
+  /**
    * Agrega un juego nuevo a la lista de la comunidad (desde el modal
    * de CommunitySection). Esta es la acción de "agregar" de la pauta.
    */
@@ -112,7 +120,11 @@ function App() {
 
   return (
     <>
-      <Navbar carrito={carrito} onEliminarDelCarrito={eliminarDelCarrito} />
+      <Navbar
+      carrito={carrito}
+      onEliminarDelCarrito={eliminarDelCarrito}
+      onComprar={comprarCarrito}
+      />
 
       <header id="inicio" className="header-bienvenida text-white text-center py-4 px-3">
         <h1 className="mb-2 titulo-principal">BASTIAN RETROZONE</h1>
